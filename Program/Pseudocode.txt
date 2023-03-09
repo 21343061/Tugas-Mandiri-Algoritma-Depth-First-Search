@@ -1,0 +1,10 @@
+function dfs(grafik, mulai, kunjungan=None):
+if kunjungan is None:
+   kunjungan = set()         // inisialisasi set kunjungan
+   kunjungan.add(mulai)          // tambahkan node mulai ke kunjungan
+   cetak(mulai)                  // cetak node mulai
+   for anggota in grafik[mulai]: // iterasi semua anggota grafik dari node mulai
+   if anggota not in kunjungan: // jika anggota belum dikunjungi
+   dfs(grafik, anggota, kunjungan) // rekursi dfs dengan anggota sebagai node mulai dan kunjungan sebagai set kunjungan
+
+
